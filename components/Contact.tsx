@@ -51,7 +51,7 @@ HTMLTextAreaElement
 >
 
 ){
-    console.log("inside handle change ",formData)
+   
 
 setFormData({
 
@@ -72,7 +72,7 @@ e:React.FormEvent
 ){
 
 e.preventDefault();
-  console.log("formData",)
+ 
 setLoading(true);
 
 setSuccess("");
