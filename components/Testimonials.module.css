@@ -1,62 +1,118 @@
-.testimonials{
-
-padding:100px 0;
-
+.testimonials {
+  padding: 100px 0;
 }
 
-.grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:24px;
-
-margin-top:50px;
-
+.heading {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 70px;
 }
 
-.card{
-
-background:white;
-
-padding:34px;
-
-border-radius:24px;
-
-box-shadow:
-var(--shadow);
-
-border:
-1px solid var(--line);
-
+.eyebrow {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
 }
 
-.quote{
-
-font-size:56px;
-
-color:var(--primary);
-
-margin-bottom:16px;
-
+.heading h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--dark);
 }
 
-.company{
-
-margin-top:12px;
-
-color:var(--muted);
-
+.heading p {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
 }
 
-@media(max-width:900px){
-
-.grid{
-
-grid-template-columns:1fr;
-
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
+.card {
+  background: white;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.quote {
+  font-size: 64px;
+  line-height: 1;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+}
+
+.feedback {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.footer h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: var(--dark);
+}
+
+.footer span {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 80px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    margin-bottom: 50px;
+  }
+
+  .heading h2 {
+    font-size: 32px;
+  }
+
+  .heading p {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 24px;
+  }
 }

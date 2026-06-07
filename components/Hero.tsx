@@ -1,101 +1,67 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Hero.module.css";
 
-export default function Hero(){
+export default function Hero() {
+  return (
+    <section className={styles.hero}>
+      <div className="wrap">
+        <div className={styles.heroGrid}>
+          
+          {/* Left Side - Logo */}
+          <div className={styles.logoSection}>
+            <Image
+              src="/images/logo.jpg"
+              alt="Creative Catalyst"
+              width={450}
+              height={450}
+              priority
+              className={styles.logo}
+            />
+          </div>
 
-return(
+          {/* Right Side - Content */}
+          <div className={styles.content}>
+            <div className={styles.eyebrow}>
+              Transforming Potential Into Success
+            </div>
 
-<section
-className={styles.hero}
->
+            <h1>
+              We Shape Raw Potential Into Powerful Results
+            </h1>
 
-<div className="wrap">
+            <p>
+              At Creative Catalyst, we shape raw potential into powerful
+              results. Just like an origami bird turns a plain sheet of paper
+              into a masterpiece, we transform everyday business processes
+              into meaningful success.
+            </p>
 
-<div
-className={styles.heroGrid}
->
+            <p>
+              With colors that mirror a rising sun, we signal a bright future
+              for your business. We provide the vision, the path, and the
+              hands-on partnership your team needs to secure winning outcomes.
+            </p>
 
-<div>
+            <div className={styles.actions}>
+              <Link
+                href="/contact"
+                className={styles.primaryButton}
+              >
+                Book Consultation
+              </Link>
 
-<div
-className={styles.eyebrow}
->
+              <Link
+                href="/about"
+                className={styles.secondary}
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
 
-We enhance with creativity
-
-</div>
-
-<h1>
-
-Shape ordinary operations
-into world-class
-manufacturing systems.
-
-</h1>
-
-<p>
-
-Creative Catalyst helps
-manufacturing companies
-improve quality,
-delivery and supplier capability.
-
-</p>
-
-<div
-className={styles.actions}
->
-
-<Link
-href="/contact"
-className={styles.primaryButton}
->
-
-Book Consultation
-
-</Link>
-
-<Link
-href="/case-studies"
-className={styles.secondary}
->
-
-Case Studies
-
-</Link>
-
-</div>
-
-</div>
-
-<div
-className={styles.panel}
->
-
-<div>
-Supplier Capability
-</div>
-
-<div>
-KPI Deployment
-</div>
-
-<div>
-Audit Readiness
-</div>
-
-<div>
-Industry 4.0
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-)
-
+        </div>
+      </div>
+    </section>
+  );
 }

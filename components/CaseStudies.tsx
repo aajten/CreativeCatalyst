@@ -1,92 +1,50 @@
 import styles from "./CaseStudies.module.css";
-
-import {
-  caseStudies
-} from "@/data/caseStudies";
+import { caseStudies } from "@/data/caseStudies";
 
 export default function CaseStudies() {
-
   return (
-
-    <section
-      className={styles.caseStudies}
-    >
-
+    <section className={styles.caseStudies}>
       <div className="wrap">
-
-        <div
-          className={styles.heading}
-        >
-
-          <div
-            className={styles.eyebrow}
-          >
-
+        <div className={styles.heading}>
+          <div className={styles.eyebrow}>
             Case Studies
-
           </div>
 
           <h2>
-
-            Transformation stories
-            from manufacturing excellence.
-
+            Transformation Stories in Manufacturing Excellence
           </h2>
 
           <p>
-
-            Execution-led consulting,
-            supplier capability development
-            and operational transformation.
-
+            Execution-Led Consulting, Supplier Capability Development &
+            Operational Transformation.
           </p>
-
         </div>
 
-        <div
-          className={styles.grid}
-        >
-
-          {caseStudies.map((study)=>(
-
+        <div className={styles.grid}>
+          {caseStudies.map((study) => (
             <div
-
               key={study.company}
-
               className={styles.card}
-
             >
-
-              <div
-                className={styles.pill}
-              >
-
+              <div className={styles.pill}>
                 {study.company}
-
               </div>
 
-              <h3>
+              <h3>{study.focus}</h3>
 
-                {study.title}
+              <div className={styles.section}>
+                <strong>Impact</strong>
+                <p>{study.impact}</p>
+              </div>
 
-              </h3>
-
-              <p>
-
-                {study.result}
-
-              </p>
-
+              <div className={styles.section}>
+                <strong>Result</strong>
+                <p>{study.result}</p>
+              </div>
             </div>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
-
-  )
-
+  );
 }

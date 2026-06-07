@@ -1,104 +1,124 @@
-.services{
-
-padding:100px 0;
-
+.services {
+  padding: 100px 0;
 }
 
-.heading{
-
-margin-bottom:50px;
-
+.heading {
+  text-align: center;
+  margin-bottom: 70px;
 }
 
-.heading h2{
-
-font-size:44px;
-
-margin-bottom:16px;
-
+.heading h2 {
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
-.heading p{
-
-color:var(--muted);
-
+.heading p {
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
-.grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
-gap:24px;
-
+.category {
+  margin-bottom: 70px;
 }
 
-.card{
-
-background:white;
-
-padding:28px;
-
-border-radius:24px;
-
-border:
-1px solid var(--line);
-
-box-shadow:
-var(--shadow);
-
-transition:.3s;
-
+.categoryTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--line);
 }
 
-.card:hover{
-
-transform:
-translateY(-6px);
-
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.icon{
-
-width:42px;
-
-height:42px;
-
-background:var(--primary);
-
-color:white;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-margin-bottom:18px;
-
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@media(max-width:1000px){
-
-.grid{
-
-grid-template-columns:
-repeat(2,1fr);
-
+.card:hover {
+  transform: translateY(-4px);
 }
 
+.active {
+  border-color: var(--primary);
 }
 
-@media(max-width:768px){
-
-.grid{
-
-grid-template-columns:1fr;
-
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.cardHeader h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cardHeader span {
+  font-size: 28px;
+  color: var(--primary);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.cardContent {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.cardContent p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading h2 {
+    font-size: 40px;
+  }
+
+  .categoryTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 0;
+  }
+
+  .heading h2 {
+    font-size: 34px;
+  }
+
+  .categoryTitle {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .cardHeader h4 {
+    font-size: 18px;
+  }
 }

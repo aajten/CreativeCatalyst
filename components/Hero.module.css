@@ -1,199 +1,154 @@
-.hero{
-
-padding:120px 0;
-
+.hero {
+  padding: 120px 0;
+  position: relative;
 }
 
-.heroGrid{
-
-display:grid;
-
-grid-template-columns:
-1.2fr .8fr;
-
-gap:70px;
-
-align-items:center;
-
+.heroGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+  min-height: 75vh;
 }
 
-.eyebrow{
-
-color:var(--primary);
-
-font-size:14px;
-
-font-weight:700;
-
-margin-bottom:18px;
-
-text-transform:uppercase;
-
+/* Logo Section */
+.logoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero h1{
-
-font-size:72px;
-
-line-height:1.1;
-
-margin-bottom:24px;
-
+.logo {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
 }
 
-.hero p{
-
-color:var(--muted);
-
-font-size:18px;
-
-line-height:1.7;
-
+/* Content Section */
+.content {
+  max-width: 700px;
 }
 
-.actions{
-
-display:flex;
-
-gap:16px;
-
-margin-top:34px;
-
+.eyebrow {
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
-.actions button{
-
-padding:14px 28px;
-
-border:none;
-
-border-radius:999px;
-
-background:var(--primary);
-
-color:white;
-
-cursor:pointer;
-
+.content h1 {
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
 }
 
-.secondary{
-
-background:white!important;
-
-color:black!important;
-
-border:
-1px solid var(--line)!important;
-
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 1rem;
 }
 
-.panel{
-
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
-
-gap:20px;
-
+/* CTA Buttons */
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
-.panel div{
-
-padding:28px;
-
-background:white;
-
-border-radius:20px;
-
-border:
-1px solid var(--line);
-
-box-shadow:
-var(--shadow);
-
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-@media(max-width:900px){
-
-.heroGrid{
-
-grid-template-columns:1fr;
-
+.primaryButton:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
-.hero h1{
-
-font-size:48px;
-
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: #fff;
+  color: var(--dark);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.panel{
-
-grid-template-columns:1fr;
-
+.secondary:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
 }
 
-}
-.primaryButton{
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    padding: 100px 0;
+  }
 
-padding:14px 28px;
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
 
-background:var(--primary);
+  .content {
+    max-width: 100%;
+  }
 
-color:white;
+  .actions {
+    justify-content: center;
+  }
 
-border-radius:999px;
-
-font-weight:600;
-
-text-decoration:none;
-
-transition:.25s;
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-}
-
-.primaryButton:hover{
-
-background:var(--primary-dark);
-
-transform:translateY(-2px);
-
+  .logo {
+    max-width: 320px;
+  }
 }
 
-.secondary{
+/* Mobile */
+@media (max-width: 576px) {
+  .hero {
+    padding: 80px 0;
+  }
 
-padding:14px 28px;
+  .content h1 {
+    font-size: 2.5rem;
+  }
 
-border:1px solid var(--line);
+  .content p {
+    font-size: 1rem;
+  }
 
-border-radius:999px;
+  .logo {
+    max-width: 250px;
+  }
 
-background:white;
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
 
-color:var(--dark);
-
-text-decoration:none;
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-transition:.25s;
-
-}
-
-.secondary:hover{
-
-background:#f8fafc;
-
+  .primaryButton,
+  .secondary {
+    width: 100%;
+    max-width: 280px;
+  }
 }

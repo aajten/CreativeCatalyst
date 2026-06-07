@@ -1,102 +1,54 @@
 import styles from "./Team.module.css";
+import { teamMembers } from "@/data/team";
 
-import {
-teamMembers
-} from "@/data/team";
+export default function Team() {
+  return (
+    <section className={styles.team}>
+      <div className="wrap">
 
-export default function Team(){
+        <div className={styles.heading}>
+          <div className={styles.eyebrow}>
+            Leadership Team
+          </div>
 
-return(
+          <h2>
+            Experts Driving Manufacturing Transformation &
+            Business Excellence
+          </h2>
 
-<section
-className={styles.team}
->
+          <p>
+            Our leadership team combines decades of experience in
+            automotive quality, supplier development, manufacturing
+            excellence, business transformation, and operational leadership.
+          </p>
+        </div>
 
-<div className="wrap">
+        <div className={styles.grid}>
+          {teamMembers.map((member) => (
+            <div
+              key={member.name}
+              className={styles.card}
+            >
+              <div className={styles.avatar}>
+                {member.initials}
+              </div>
 
-<div
-className={styles.heading}
->
+              <h3>{member.name}</h3>
 
-<div
-className={styles.eyebrow}
->
+              <p className={styles.role}>
+                {member.role}
+              </p>
 
-Leadership Team
+              <div className={styles.divider}></div>
 
-</div>
+              <p className={styles.experience}>
+                {member.experience}
+              </p>
+            </div>
+          ))}
+        </div>
 
-<h2>
-
-Experts driving manufacturing
-transformation and supplier excellence.
-
-</h2>
-
-<p>
-
-Execution-led consulting backed by
-deep automotive, manufacturing and
-business excellence experience.
-
-</p>
-
-</div>
-
-<div
-className={styles.grid}
->
-
-{teamMembers.map((member)=>(
-
-<div
-
-key={member.name}
-
-className={styles.card}
-
->
-
-<div
-className={styles.avatar}
->
-
-{member.initials}
-
-</div>
-
-<h3>
-
-{member.name}
-
-</h3>
-
-<p
-className={styles.role}
->
-
-{member.role}
-
-</p>
-
-<p
-className={styles.experience}
->
-
-{member.experience}
-
-</p>
-
-</div>
-
-))}
-
-</div>
-
-</div>
-
-</section>
-
-)
-
+      </div>
+    </section>
+  );
 }
