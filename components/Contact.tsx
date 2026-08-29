@@ -99,6 +99,30 @@ export default function Contact() {
               <li>✔ Hands-On Implementation Support</li>
               <li>✔ Customized Training Programs</li>
             </ul>
+
+            {/* Contact Information */}
+            <div className={styles.contactDetails}>
+              <h3>Get In Touch</h3>
+
+              <div className={styles.contactItem}>
+                <span className={styles.contactIcon}>✉</span>
+                <div>
+                  <a href="mailto:dineshpethe@creativecatalist.in">
+                  dineshpethe@creativecatalist.in
+                  </a>
+                </div>
+              </div>
+
+              <div className={styles.contactItem}>
+                <span className={styles.contactIcon}>☎</span>
+                <div>
+                  
+                  <a href="tel:+91+917620912249">
+                    +91 7620 912 249
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <form
