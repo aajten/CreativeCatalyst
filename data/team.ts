@@ -8,18 +8,6 @@ export const teamMembers = [
 experience:
 "40+ years of leadership and consulting experience."
 },
-
-{
- initials:"JJ",
- name:"Jayendra Joshi",
-
-role:
-"Business Excellence, Program Management, Plant Management & L&D",
-
-experience:
-"25+ years across auto component manufacturing and wind energy."
-},
-
 {
  initials:"NJ",
 
